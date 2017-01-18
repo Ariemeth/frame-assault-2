@@ -3,7 +3,7 @@ package main
 import (
 	"runtime"
 
-	"github.com/Ariemeth/quantum-pulse/engine"
+	qp "github.com/Ariemeth/quantum-pulse"
 )
 
 func init() {
@@ -13,7 +13,7 @@ func init() {
 
 func main() {
 
-	engine := new(engine.Engine)
+	engine := new(qp.Engine)
 
 	engine.Init()
 
