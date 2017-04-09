@@ -1,15 +1,9 @@
 package main
 
 import (
-	"runtime"
-
+	"fmt"
 	qp "github.com/Ariemeth/quantum-pulse"
 )
-
-func init() {
-	// GLFW event handling must run on the main OS thread
-	runtime.LockOSThread()
-}
 
 func main() {
 
@@ -17,7 +11,12 @@ func main() {
 
 	engine.Init()
 
-	engine.LoadScene(engine.LoadSceneFile("scene1.json"))
+	sceneId, err := engine.LoadSceneFile("scene1.json")
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	engine.LoadScene(sceneId)
 
 	engine.Run()
 }
