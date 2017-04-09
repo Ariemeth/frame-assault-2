@@ -11,12 +11,12 @@ func main() {
 
 	engine.Init()
 
-	sceneId, err := engine.LoadSceneFile("scene1.json")
+	sceneID, err := engine.LoadSceneFile("scene1.json")
 	if err != nil {
 		fmt.Println(err)
 		return
 	}
-	engine.LoadScene(sceneId)
+	engine.LoadScene(sceneID)
 
 	engine.Run()
 }
