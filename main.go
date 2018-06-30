@@ -2,14 +2,21 @@ package main
 
 import (
 	"fmt"
-	qp "github.com/Ariemeth/quantum-pulse"
+
+	qpe "github.com/Ariemeth/quantum-pulse/engine"
+)
+
+const (
+	screenWidth  = 800
+	screenHeight = 600
+	windowTitle  = "frame assault 2"
 )
 
 func main() {
 
-	engine := new(qp.Engine)
+	engine := new(qpe.Engine)
 
-	engine.Init()
+	engine.Init(screenWidth, screenHeight, windowTitle)
 
 	sceneID, err := engine.LoadSceneFile("scene1.json")
 	if err != nil {
