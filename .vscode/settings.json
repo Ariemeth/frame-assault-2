@@ -16,6 +16,7 @@
 	// Configure glob patterns for excluding files and folders.
 	"files.exclude": {
 		"*.exe": true,
-		"debug": true
+		"debug": true,
+		"frame-assault-2":true
 	}
 }
